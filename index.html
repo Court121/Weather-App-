@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+  <div class="container weather-app">
+    <form class="search-form" id="search-form">
+      <div class="row">
+        <div class="col-9">
+          <input type="search" placeholder="Enter a City" autofocus="on" autocomplete="off" id="city-input"
+            class="form-control" />
+        </div>
+        <div class="col-3">
+          <input type="submit" value="Search" class="form-control search-button" />
+          <div class="col-3">
+            <button class="btn btn-success w-100" id="current-location-button">
+              Current
+            </button>
+          </div>
+        </div>
+    </form>
+    <div class="row">
+      <div class="col-5">
+        <h1 id="city"></h1>
+        <ul>
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="clear-fix weather-temperature">
+          <img src="" alt="Clear" id="icon" class="float-left" />
+           <div class="float-left">
+            <span class="temperature" id="temperature"></span>
+            <span class="units">
+              <a href="#" id="celsius-link">℃</a>
+              /
+              <a href="#" id="fahrenheit-link">ºF</a>
+            </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <ul class="hum-wind">
+        <li>Wind: <span id="wind"></span> km/h</li>
+        <li>Humidity: <span id="humidity"></span>%</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row weather-forecast" id="forecast">
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <footer>
+
+  </footer>
+  <script src="src/script.js"></script>
+</body>
+
+</html>
